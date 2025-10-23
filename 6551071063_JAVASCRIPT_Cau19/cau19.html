@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Mua vé xem phim</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="Styles/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="Scripts/script.js"></script>
+</head>
+
+<body>
+  <table border="1" cellspacing="0" cellpadding="8" style="margin:auto; width:400px; border-collapse: collapse;">
+    <tr>
+      <th colspan="2" style="text-align:center;">Mua vé</th>
+    </tr>
+    <tr>
+      <td>Ngày chiếu</td>
+      <td><input type="text" id="datepicker" placeholder="dd/mm/yyyy"></td>
+    </tr>
+    <tr>
+      <td>Phim</td>
+      <td>
+        <select id="film">
+          <option value="">Phim</option>
+          <option value="Yêu em bất chấp" data-price="45000">Yêu em bất chấp</option>
+          <option value="Thám tử Conan" data-price="55000">Thám tử Conan</option>
+          <option value="Nữ sinh ngổ ngáo" data-price="60000">Nữ sinh ngổ ngáo</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Suất chiếu</td>
+      <td>
+        <select id="time">
+          <option value="">Suất chiếu</option>
+          <option value="14h – 16h" data-rate="1.0">14h – 16h</option>
+          <option value="17h – 19h" data-rate="1.2">17h – 19h</option>
+          <option value="19h – 20h" data-rate="1.5">19h – 20h</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Phòng chiếu</td>
+      <td>
+        <select id="room">
+          <option value="">Phòng chiếu</option>
+          <option value="A" data-room="1.2">A</option>
+          <option value="B" data-room="1.3">B</option>
+          <option value="C" data-room="1.5">C</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Chọn chỗ ngồi</td>
+      <td>
+        <select id="seat" multiple size="4" style="width:100%;">
+          <option value="G1">Ghế 01</option>
+          <option value="G2">Ghế 02</option>
+          <option value="G3">Ghế 03</option>
+          <option value="G4">Ghế 04</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align:center;">
+        <button type="button" id="buyBtn">Mua vé</button>
+      </td>
+    </tr>
+  </table>
+
+  <div id="ticketInfo" style="display:none; margin-top:25px; text-align:center;">
+    <h3>Thông tin vé</h3>
+    <table border="1" cellpadding="8" cellspacing="0" id="infoTable" style="margin:auto; border-collapse: collapse;">
+      <tr><th>Khách hàng</th><td>Nguyễn Văn A</td></tr>
+      <tr><th>Ngày chiếu</th><td id="showDate"></td></tr>
+      <tr><th>Phim</th><td id="showFilm"></td></tr>
+      <tr><th>Suất chiếu</th><td id="showTime"></td></tr>
+      <tr><th>Phòng chiếu</th><td id="showRoom"></td></tr>
+      <tr><th>Ghế</th><td id="showSeat"></td></tr>
+      <tr><th>Tổng tiền</th><td id="showTotal" style="font-weight:bold; color:red;"></td></tr>
+    </table>
+  </div>
+</body>
+</html>

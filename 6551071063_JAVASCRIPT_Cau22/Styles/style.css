@@ -1,0 +1,84 @@
+body {
+  background-color: #fcfcfc;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+input[type="text"], input[type="email"], input[type="file"] {
+  width: 250px;
+  padding: 5px;
+}
+
+#addSkill {
+  margin-left: 10px;
+  background: #00aaff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#submitBtn {
+  margin-top: 15px;
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #009688;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#submitBtn:hover {
+  background-color: #00796b;
+}
+
+.cv-card {
+  width: 350px;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 30px auto;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.cv-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.skill-bar {
+  margin: 10px 0;
+  text-align: left;
+}
+
+.skill-bar span {
+  display: block;
+  font-weight: bold;
+}
+
+.bar {
+  height: 15px;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: #00bcd4;
+  text-align: right;
+  color: white;
+  padding-right: 5px;
+  font-size: 12px;
+  line-height: 15px;
+}

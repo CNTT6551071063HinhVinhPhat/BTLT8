@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng ký CV</title>
+  <link rel="stylesheet" href="Styles/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="Scripts/script.js" defer></script>
+</head>
+<body>
+  <h2>Đăng ký CV</h2>
+  <form id="cvForm">
+    <table border="1" cellpadding="8" cellspacing="0">
+      <tr>
+        <td>Họ và tên</td>
+        <td><input type="text" id="name" required></td>
+      </tr>
+      <tr>
+        <td>Địa chỉ</td>
+        <td><input type="text" id="address" required></td>
+      </tr>
+      <tr>
+        <td>Điện thoại</td>
+        <td><input type="text" id="phone" required></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><input type="email" id="email" required></td>
+      </tr>
+      <tr>
+        <td>Nghề nghiệp</td>
+        <td><input type="text" id="job" required></td>
+      </tr>
+      <tr>
+        <td>Ảnh đại diện</td>
+        <td><input type="file" id="avatar" accept="image/*"></td>
+      </tr>
+      <tr>
+        <td rowspan="2">Kỹ năng</td>
+        <td>
+          Tên kỹ năng: <input type="text" id="skillName">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Mức độ: <input type="range" id="skillLevel" min="0" max="100" step="10">
+          <button type="button" id="addSkill">Thêm</button>
+        </td>
+      </tr>
+    </table>
+    <br>
+    <button type="button" id="submitBtn">Đăng ký</button>
+  </form>
+
+  <div id="cvDisplay" style="display:none;">
+    <div class="cv-card">
+      <img id="cvAvatar" alt="Avatar">
+      <h3 id="cvName"></h3>
+      <p id="cvJob"></p>
+      <p id="cvAddress"></p>
+      <p id="cvPhone"></p>
+      <p id="cvEmail"></p>
+      <h4>Kỹ năng</h4>
+      <div id="cvSkills"></div>
+    </div>
+  </div>
+</body>
+</html>

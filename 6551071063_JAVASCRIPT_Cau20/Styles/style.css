@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 800px;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background: white;
+}
+
+.slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slide-track {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.slide-track img {
+  width: 160px; /* 5 ảnh * 160 = 800px */
+  height: 120px;
+  object-fit: cover;
+  margin: 5px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+button.prev, button.next {
+  position: absolute;
+  top: 45%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+button.prev:hover, button.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+button.prev {
+  left: 5px;
+}
+
+button.next {
+  right: 5px;
+}
